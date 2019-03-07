@@ -12,6 +12,7 @@ attr_reader :bike_rack
   end
 
   def dock_bike(bike)
+    raise("Bike Rack is full!") if @bike_rack.length == 1
     @bike_rack << bike
   end
 
